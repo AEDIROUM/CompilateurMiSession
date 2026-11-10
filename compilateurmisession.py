@@ -10,12 +10,11 @@ with open(csv_path, newline='', encoding='utf-8-sig') as f:
     reader = csv.DictReader(f)
     reader.fieldnames = [h.strip() for h in reader.fieldnames]
 
-    if not os.path.exists(output_dir):
+    if not os.path.isdir(output_dir):
         os.makedirs(output_dir)
 
     for row in reader:
         sigle = row[column_sigle]
-        # TODO: Create output directory
         result = os.system(
             f"typst compile --input sigle=\"{sigle}\" rapport.typ "
             f'"output/{sigle}.pdf"'

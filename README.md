@@ -9,15 +9,17 @@ du CSV du formulaire d'évaluation de mi-session en un PDF formaté.
 
 Voici la liste des logiciels requis pour l'exécution du script :
 
-* [Typst](https://typst.app/)
-* [Python](https://www.python.org/)
+* [Typst >= 0.15](https://typst.app/)
+* [Python >= 3.13](https://www.python.org/)
+
+Il est possible que le script fonctionne avec des versions antérieures. Elles n'ont pas été testées.
 
 ### Exécution du script
 
-Dans`compilateurmisession.py`, changez les valeurs des variables suivantes :
+Dans `compilateurmisession.py`, changez les valeurs des variables suivantes :
 
-* `column_sigle` : doit être l'id de la question associée au sigle du cours. (Cette valeur se retrouve sur la deuxième ligne du CSV)
-* `csv_path` : doit être le nom du fichier CSV contenant les résultats de l'évaluation de mi-session.
+* `column_sigle` doit être l'id de la question associée au sigle du cours. (Cette valeur se retrouve sur la deuxième ligne du CSV)
+* `csv_path` doit être le nom du fichier CSV contenant les résultats de l'évaluation de mi-session.
 
 Puis, exécuter la commande suivante.
 
